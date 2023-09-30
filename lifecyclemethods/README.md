@@ -29,15 +29,87 @@ Step 7: Save and run the application.
 ```
 /*
 Program to print the text “Hello World”.
-Developed by:
-Registeration Number :
+Developed by:Thanga Deepika R
+Registeration Number : 212221040170
 */
+```
+## activity_main.xml
+```
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+## MainActivity.java
+```
+package com.example.deehelloworld;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        // Display toast message when the activity is created
+        Toast.makeText(getApplicationContext(), "onCreate Invoked", Toast.LENGTH_LONG).show();
+    }
+    @Override
+    protected void onStart(){
+        super.onStart();
+        Toast.makeText(getApplicationContext(), "onStart Invoked", Toast.LENGTH_LONG).show();
+    }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        Toast.makeText(getApplicationContext(), "onPause Invoked", Toast.LENGTH_LONG).show();
+    }
+    @Override
+    protected void onResume(){
+        super.onResume();
+        Toast.makeText(getApplicationContext(), "onResume Invoked", Toast.LENGTH_LONG).show();
+    }
+    @Override
+    protected void onStop(){
+        super.onStop();
+        Toast.makeText(getApplicationContext(), "onStop Invoked", Toast.LENGTH_LONG).show();
+    }
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+        Toast.makeText(getApplicationContext(), "onRestart Invoked", Toast.LENGTH_LONG).show();
+    }
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        Toast.makeText(getApplicationContext(), "onDestroy Invoked", Toast.LENGTH_LONG).show();
+    }
+}
 ```
 
 ## OUTPUT
-
-
-
-
+![image](https://github.com/suryacse05/Mobile-Application-Development/assets/125663099/3c39e1a1-bd79-4ca1-afec-9dfcd93fada1)
 ## RESULT
 Thus a Simple Android Application create a HelloWorld Activity using all lifecycles methods to display messages using Android Studio is developed and executed successfully.
